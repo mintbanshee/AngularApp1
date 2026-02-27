@@ -1,0 +1,22 @@
+<section *ngIf="user$ | async as user">
+
+  <h3>Bio</h3>
+
+  <!-- View Mode -->
+  <p *ngIf="!editing">
+    {{ user.bio }}
+  </p>
+
+  <!-- Edit Mode -->
+  <div *ngIf="editing">
+    <textarea [(ngModel)]="newBio" rows="4"></textarea>
+    <br>
+    <button (click)="saveBio()">Save</button>
+    <button (click)="cancelEdit(user)">Cancel</button>
+  </div>
+
+  <button *ngIf="!editing" (click)="startEdit(user)">
+    Edit Bio
+  </button>
+
+</section>

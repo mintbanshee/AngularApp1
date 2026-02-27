@@ -1,0 +1,7 @@
+
+<p>
+  Status:
+  <strong>{{ (isOnline$ | async)?.isOnline ? 'Online' : 'Offline' }}</strong>
+</p>
+
+<button (click)="toggle()">Toggle</button>

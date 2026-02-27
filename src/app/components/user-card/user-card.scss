@@ -1,0 +1,44 @@
+.card {
+    padding: 1rem;
+    border-radius: 12px;
+    background-image:
+    linear-gradient(to right, #2B2C49, #B5B9FF),
+    linear-gradient(#ffffff, #ffffff);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 200px, 100% 100%;
+    background-position: top left, top left;
+    text-align:  center;
+    box-shadow: 0 4px 8px rgba(29, 27, 41, 0.6);
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+    margin: 2rem auto;
+
+    .profPic {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        border: solid #fff 8px;
+        object-fit: cover;
+        box-shadow: 4px 8px 14px rgb(12, 11, 17);
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin: 1rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    .lugrasimo-regular {
+        font-family: "Lugrasimo", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
+}
