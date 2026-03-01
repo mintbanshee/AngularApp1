@@ -1,22 +1,29 @@
 <section *ngIf="user$ | async as user">
+  <div class ="bioCard">
 
-  <h3>Bio</h3>
+    <div class="bioHeader">
+      <h3>Bio</h3>
+    </div>
 
-  <!-- View Mode -->
-  <p *ngIf="!editing">
-    {{ user.bio }}
-  </p>
+    <div class="bioBody">
+      <!-- View Mode -->
+      <p *ngIf="!editing">
+        {{ user.bio }}
+      </p>
+      <!-- Edit Mode & Save/Cancel Buttons-->
+      <div *ngIf="editing">
+        <textarea [(ngModel)]="newBio" rows="4"></textarea>
+        <br>
+        <button (click)="cancelEdit(user)">Cancel</button>
+        <button class="btnPrimary" (click)="saveBio()">Save</button>
+      </div>
+    </div>
 
-  <!-- Edit Mode -->
-  <div *ngIf="editing">
-    <textarea [(ngModel)]="newBio" rows="4"></textarea>
-    <br>
-    <button (click)="saveBio()">Save</button>
-    <button (click)="cancelEdit(user)">Cancel</button>
+    <!-- Main Edit Button -->
+    <div class="bioActions">
+      <button class="btnPrimary" *ngIf="!editing" (click)="startEdit(user)">
+        Edit Bio
+      </button>
+    </div>
   </div>
-
-  <button *ngIf="!editing" (click)="startEdit(user)">
-    Edit Bio
-  </button>
-
 </section>

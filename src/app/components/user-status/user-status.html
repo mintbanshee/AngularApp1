@@ -1,7 +1,34 @@
+<div *ngIf="isOnline$ | async as status">
+  <div *ngIf="showStatus$ | async as visibility" class="statusRow">
+ 
+    <div class="statusPill">
+      <span class="statusDot"
+        [class.hidden]="!visibility.showStatus"
+        [class.online]="visibility.showStatus && status.isOnline"
+        [class.offline]="visibility.showStatus && !status.isOnline">
+      </span>
 
-<p>
-  Status:
-  <strong>{{ (isOnline$ | async)?.isOnline ? 'Online' : 'Offline' }}</strong>
-</p>
+      <span class="statusText">
+        {{ visibility.showStatus ? (status.isOnline ? 'Online' : 'Offline') : 'Hidden' }}
+      </span>
+    </div>
 
-<button (click)="toggle()">Toggle</button>
+    <div class="onlineStatus">
+      <button class="btn btnPrimary" (click)="toggleStatus()">
+        {{ status.isOnline ? 'Set Offline' : 'Set Online' }}
+      </button>
+
+    <div class="visibilityControl">
+      <span class="visibilityLabel">Visible</span>
+      <label class="switch">
+        <input type="checkbox"
+          [checked]="visibility.showStatus"
+          (change)="toggleVisibility()" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    </div>
+
+  </div>
+</div>

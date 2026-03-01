@@ -1,10 +1,69 @@
-.bio {
-    background: #eef2f7;
-    padding: 1rem;
-    border-radius: 8px;
+.bioCard {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #f4f5ff;
+    text-align:  center;    
+    box-shadow: 2px 2px 8px rgba(29, 27, 41, 0.6);
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+    margin: 2rem auto;
 
     textarea {
         width: 100%;
         min-height: 80px;;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin: 1rem;
+        color: #2B2C49;
+    }
+
+    p {
+        font-size: 1.4rem;
+        color: #3e3e43;
+        padding: 25px;
+    }
+    .bioHeader {
+        border-bottom: solid #2B2C49;
+    }
+    button {
+        border-radius: 10px;
+        border: 1px solid #37384b;
+        background: #ffffff;
+        width: 100px;
+        height: 35px;
+        font-size: 1rem;
+        color: #2b2c49;
+        margin: 1rem;
+        cursor: pointer;
+    }
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+        }
+        .btnPrimary {
+            background: linear-gradient(90deg,
+            rgba(55, 48, 163, 0.95),
+            rgba(129, 140, 248, 0.95));
+            color: white;
+    }
+
+    .bioBody {
+        margin: 2rem auto;
+        max-width: 800px;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 100%;
+        padding: 0.75rem;
+        border-radius: 4px;
+        border: 1px solid #2b2c49;
+        font-family: inherit;
+        font-size: 1rem;
+        resize: vertical;
     }
 }
