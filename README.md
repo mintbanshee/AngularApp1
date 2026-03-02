@@ -4,20 +4,30 @@ An Angular application that demonstrates component-based architecture, shared st
 
 ## Features
 - **User Card**
-  - Displays profile picture, name, and age
+  - Displays profile picture, name, age, email and role
   - Styled profile card with gradient “cover” header
+  - Embedded font for user's name (as well as My Dashboard header) 
 - **User Bio**
   - Shows a short bio
-  - Includes an “Edit Bio” button (UI ready / functionality based on assignment requirements)
+  - Includes an “Edit Bio” button
+  - Switches to a textarea with Save and Cancel buttons to edit the bio
+  - Buttons match the User Card design
 - **User Status**
   - Shows online/offline status
   - Toggle button updates the status (via service)
+  - Allows user to toggle their status as visible or hidden
+  - Green = online
+  - Red = offline
+  - Grey = hidden
+  - Button and toggle match User Card design
 
 ## Tech Used
-- Angular (standalone components)
+- Angular
 - TypeScript
-- SCSS (Sass)
-- RxJS (BehaviorSubject) for shared state in a service
+- SCSS
+- RxJS
+- HTML
+- VS Code
 
 ## Learning Objectives
 - Creating standalone Angular components
@@ -25,17 +35,11 @@ An Angular application that demonstrates component-based architecture, shared st
 - Structuring a small Angular project
 - Styling components using SCSS
 
-## Project Structure
-- `src/app/components/`
-  - `user-card/`
-  - `user-bio/`
-  - `user-status/`
-- `src/app/services/`
-  - `user.service.ts`
-- `public/assets/`
 
 ## UI Preview
 
-### Day 1's Focus: Profile Image & Name Card
+<img width="1417" height="916" alt="Top" src="https://github.com/user-attachments/assets/e6ffcc50-fe9d-4037-992a-f914f7a7192b" />
 
-<img width="1388" height="557" alt="ImgCard" src="https://github.com/user-attachments/assets/c935c6a9-f0d5-494b-8236-677c3702d0c7" />
+<img width="1606" height="914" alt="Bio" src="https://github.com/user-attachments/assets/92ce75cd-90b5-4720-80c1-99b5546adb7b" />
+
+<img width="1607" height="919" alt="TextArea" src="https://github.com/user-attachments/assets/22f0603a-f24f-46f3-b130-f0243744625c" />
